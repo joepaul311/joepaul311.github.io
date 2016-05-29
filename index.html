@@ -15,6 +15,8 @@
         </style>    
   </head>
   <body  data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+      
+      <div id = "dimension"> aaa</div>
       <!-- try tabs for the non-mobile version-->
       <div class = "col-xs-12 visible-xs page-header"><h1>Logo/Text <small>More text...</small></h1></div>
       <row  class = "visible-xs"> 
@@ -109,7 +111,7 @@ $(document).ready(function(){
     });
   // Add scrollspy to <body>
   $('body').scrollspy({target: ".CLASS", offset: 50});   
-
+  
   // Add smooth scrolling on all links inside the navbar
   $("#myScrollspy a").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -179,10 +181,20 @@ $(document).ready(function(){
         {
             $("#" + artists[j].replace(" ", "") + "Content").html(artistHTML[j]);
         }
+    var width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var height = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+   
+    $("#dimension").html(width + " - " + height); 
 });
       </script>    
     
-    
+  
+      
     
   </body>
 </html>
